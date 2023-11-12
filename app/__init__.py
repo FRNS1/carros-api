@@ -15,7 +15,7 @@ def create_app():
     app.run(host='172.31.47.123', port=5000)
     db.init_app(app)
     migrate = Migrate(app, db)
-    app.register_blueprint(users_bp)
+    app.register_blueprint(users_bp, url_prefix='/users')
     app.register_blueprint(carros_bp)
     app.register_blueprint(login_bp)
     app.register_blueprint(files_bp)
