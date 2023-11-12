@@ -12,7 +12,6 @@ def create_app():
     CORS(app, resources={r"/*": {"origins": "*"}}, supports_credentials=True)
     app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:34215547@carros-usados-db.cgjfydnkuq23.us-east-1.rds.amazonaws.com/carrosusados'
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-    app.run(debug=True)
     db.init_app(app)
     migrate = Migrate(app, db)
     app.register_blueprint(users_bp, url_prefix='/users')
