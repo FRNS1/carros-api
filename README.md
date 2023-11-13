@@ -19,4 +19,6 @@ Para cadastrar um usuário o endpoint é /users/registeruser, o método é POST 
     "senha": "<senha>"
 }
 
+Repositório front-end: https://github.com/FRNS1/carros-front.git
+
 # OBS: Por conta de um problema de CORS que não consegui identificar em tempo hábil tive que despadronizar as rotas de users, por isso ela é a única com prefixo /users
