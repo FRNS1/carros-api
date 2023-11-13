@@ -14,7 +14,7 @@ def create_app():
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
     db.init_app(app)
     migrate = Migrate(app, db)
-    app.register_blueprint(users_bp, url_prefix='/users')
+    app.register_blueprint(users_bp)
     app.register_blueprint(carros_bp)
     app.register_blueprint(login_bp)
     app.register_blueprint(files_bp)
