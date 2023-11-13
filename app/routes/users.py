@@ -32,7 +32,7 @@ def register_user():
         result = register_user_schema.dump(user)
         return make_response(
             jsonify(
-                mensagem="  ",
+                mensagem="Usuario criado com sucesso",
                 dados=result
             ), 201
         )
