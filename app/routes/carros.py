@@ -56,6 +56,7 @@ def update_carro(id):
         carro.motor = data['motor']
         carro.cambio = data['cambio']
         carro.preco = data['preco']
+        carro.foto = data['foto']
         db.session.commit()
 
         return make_response(
