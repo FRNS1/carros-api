@@ -5,6 +5,7 @@ from app.fileUploadService import upload_files_to_s3
 files_bp = Blueprint('files', __name__)
 
 @files_bp.route('/uploadfile', methods=['POST'])
+@token_required
 def upload_file():
     file = request.files['file']
     output = upload_files_to_s3(file)
