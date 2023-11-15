@@ -25,7 +25,7 @@ def login():
             token = jwt.encode({'username': user.email, 'exp': datetime.datetime.now() + datetime.timedelta(hours=12)},
                                 SECRET_KEY)
             return jsonify(mensagem='Validacao sucedida', token=f'{token.encode()}',
-                           exp=datetime.datetime.now() + datetime.timedelta(hours=12),
+                           exp=datetime.datetime.now() + datetime.timedelta(hours=98),
                            user=f'{user.id}')
 
         return jsonify(mensagem='credenciais incorretas')

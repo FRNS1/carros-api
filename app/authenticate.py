@@ -11,7 +11,6 @@ def token_required(f):
         if not token:
             return jsonify(mensagem='Você não enviou um token de autorização'), 401
         try:
-            print('teste 2')
             data = jwt.decode(token.replace("b'", "").replace("'", ""), SECRET_KEY, algorithms=['HS256'])
             print(data)
             current_user = "teste"
